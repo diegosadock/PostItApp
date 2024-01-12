@@ -1,0 +1,136 @@
+#addButton {
+    background-color: aquamarine;
+    border: 1px solid black;
+    display:inline-block;
+    cursor:pointer;
+    font-family:sans-serif;
+    font-weight: lighter;
+    font-size:15px;
+    padding: 5px;
+    text-decoration: none;
+    line-height: 30px;
+    border-radius: 30px;
+}
+
+#addButton:hover {
+    background-color: #ffff00;
+    transform: scale(1.05);
+}
+
+#addButton:active {
+    transform: scale(0.95);
+}
+
+.post-it {
+    background-color: #fffcaa;
+    width: 200px;
+    min-height: 200px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid black;
+    clear: both;
+    position: relative;
+    cursor: grab; /* Defina o cursor padrão como ponteiro */
+    transition: transform 0.2s;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.post-it.dragging {
+    cursor: grabbing; /* Mantenha o cursor como "grabbing" enquanto o post-it estiver sendo arrastado */
+    transform: scale(1.1); /* Aumente ligeiramente o tamanho durante o arrasto */
+}
+
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+
+.text-area {
+    background-color: #f5f2a8;
+    width: 200px;
+    height: 130px;
+    border: 1px solid #fffcaa;
+    resize: none;
+    overflow: auto;
+    outline: 0;
+    font-size: 15px;
+}
+
+.addnote-button {
+    position: relative;
+    top: 160px;
+    left: 110px;
+    cursor: pointer;
+}
+
+.addnote-button:hover {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.addnote-button:active {
+    transform: scale(0.95);
+}
+
+.editnote-button {
+    position: relative;
+    top: 160px;
+    left: 130px;
+    cursor: pointer;
+}
+
+.editnote-button:hover {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.editnote-button:active {
+    transform: scale(0.95);
+}
+
+.author {
+    margin-top: 90px;
+    font-weight: bold;
+}
+
+* {
+    user-select: none;
+}
+
+.color-selector {
+    width: 15px;
+    height: 15px;
+    display: flex;
+    background-color: #fffcaa;
+    border: 1px solid black;
+}
+
+.popup-button {
+   height: 15px;
+   margin-bottom: 5px;
+   background-image:url("https://cdn.iconscout.com/icon/free/png-256/free-popup-2-433617.png");
+}
+
+.popup {
+    position: absolute;
+    z-index: 9999;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 400px;
+    width: 80%;
+    cursor: move;
+}
+
+/* Estilo para o botão de fechar no popup */
+.popup-close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    color: #333;
+}
